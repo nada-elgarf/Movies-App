@@ -1,0 +1,254 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  scroll-padding-top: 2rem;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px;
+}
+
+/* custom scroll bar */
+html::-webkit-scrollbar {
+  width: 0.5rem;
+  background-color: var(--text-color);
+}
+
+html::-webkit-scrollbar-thumb {
+  background-color: var(--main-color);
+  border-radius: 5rem;
+}
+
+/* custom scroll bar */
+:root {
+  --main-color: #ff2c1f;
+  --text-color: #020307;
+  --bg-color: #fff;
+}
+
+a {
+  text-decoration: none;
+}
+
+.btn-danger {
+  --bs-btn-bg: var(--main-color);
+  --bs-btn-border-color: var(--main-color);
+  --bs-btn-hover-bg: #fa1216;
+  --bs-btn-hover-border-color: #fa1216;
+}
+
+section {
+  padding: 4.5rem 1.5rem;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: var(--text-color);
+  color: var(--bg-color);
+}
+
+
+/* Navbar */
+.navbar {
+  transition: 0.5s;
+  padding: 20px 0;
+}
+
+
+.navbar.shadow {
+  background-color: var(--bg-color);
+  box-shadow: 0 0 4px rgb(14 55 54 / 15%);
+}
+
+.navbar-brand {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #ffffff !important;
+}
+
+
+.navbar-brand i {
+  font-size: 24px;
+  color: var(--main-color);
+}
+
+.custom-nav-link {
+  font-weight: 500;
+  color: #ff2c1f !important;
+  position: relative;
+}
+
+.navbar.shadow .custom-nav-link,
+.navbar.shadow .navbar-brand {
+  color: #020307 !important;
+}
+
+
+.custom-nav-link::after {
+  content: '';
+  position: absolute;
+  background-color: var(--main-color);
+  width: 0;
+  height: 3px;
+  left: 0;
+  bottom: -4px;
+  transition: 0.4s all linear;
+}
+
+.custom-nav-link:hover::after,
+.custom-nav-link.active::after {
+  width: 100%;
+}
+
+
+.navbar-toggler {
+  color: var(--bg-color);
+  border: none;
+}
+
+.navbar-toggler:focus {
+  box-shadow: none;
+}
+
+.navbar.shadow .navbar-toggler i {
+  color: var(--text-color);
+}
+
+@media (max-width: 991px) {
+  .navbar-collapse {
+    background-color: rgba(2, 3, 7, 0.95);
+    padding: 20px;
+    border-radius: 0.5rem;
+    margin-top: 10px;
+  }
+
+  .navbar.shadow .navbar-collapse {
+    background-color: rgba(255, 255, 255, 0.95);
+  }
+
+  .navbar.shadow .navbar-collapse .custom-nav-link {
+    color: var(--text-color);
+  }
+
+  .navbar-nav {
+    align-items: center;
+  }
+
+  .nav-item {
+    margin: 10px 0;
+  }
+}
+
+
+/* Navbar */
+#home {
+  padding-top: 6rem;
+}
+
+#home .fw-500 {
+  font-weight: 500;
+}
+
+.btn-danger {
+  background-color: var(--main-color);
+  border-color: var(--main-color);
+  padding: 0.7rem 1.4rem;
+  font-weight: 400;
+}
+
+.btn-danger:hover {
+  background: #fa1216;
+  border-color: #fa1216;
+}
+
+.background {
+  background-color: #020307;
+}
+
+.fw-500 {
+  font-weight: 500;
+}
+
+.movie-img-container {
+  height: 270px;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.movie-img-container img {
+  transition: 0.3s all ease-in-out;
+  cursor: pointer;
+  height: 100%;
+}
+
+.movie-img-container img:hover {
+  transform: scale(1.05);
+}
+
+.social-link {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--text-color);
+  color: var(--main-color);
+  border: 3px solid rgba(255, 255, 255, 0.1);
+  transition: 0.2s all linear;
+}
+
+.social-link:hover {
+  background-color: var(--main-color);
+  color: var(--bg-color);
+  transform: translateY(-3px);
+}
+
+section {
+  padding: 5rem 0;
+}
+
+#newsletter form {
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+#newsletter form:focus-within {
+  box-shadow: 0 5px 20px rgba(255, 44, 31, 0.3);
+}
+
+#newsletter input::placeholder {
+  color: #666;
+}
+
+.footer {
+  padding: 2rem;
+  border-radius: 10px 10px 0 0;
+  margin-bottom: 0;
+  font-weight: 600;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.copy {
+  padding: 1rem 0;
+}
+
+.footer a {
+  text-decoration: none;
+}
+
+.footer .social-icons a {
+  background-color: #fff;
+}
+
+.footer .social-icons a:hover {
+  background-color: var(--main-color);
+}
